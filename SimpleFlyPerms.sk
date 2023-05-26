@@ -1,0 +1,21 @@
+#Replace Permissions with your servers permissions node
+#e.g.: vip.fly or sth 
+
+options:
+    Permissions: "perms.1" or "perms.2" or "perms.3" or "perms.4"
+
+on player world change:
+    wait 1 tick
+    if player is in world "world":
+        if player has permissions {@Permissions}:
+            set player's flight mode to true 
+        else:
+            set player's flight mode to false
+
+on join:
+    wait 1 tick
+    if player is in world "world":
+        if player has permissions {@Permissions}:
+            set player's flight mode to true 
+        else:
+            set player's flight mode to false
